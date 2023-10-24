@@ -1,0 +1,47 @@
+speed_job: (g=0): rw=randrw, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=4
+fio-3.28
+Starting 1 process
+Jobs: 1 (f=1): [m(1)][100.0%][r=4340KiB/s,w=4192KiB/s][r=1085,w=1048 IOPS][eta 00m:00s]
+speed_job: (groupid=0, jobs=1): err= 0: pid=5828: Sun Oct 22 22:06:53 2023
+  read: IOPS=1083, BW=4334KiB/s (4438kB/s)(84.6MiB/20001msec)
+    slat (usec): min=6, max=8976, avg=472.34, stdev=371.70
+    clat (usec): min=4, max=13665, avg=1390.29, stdev=654.76
+     lat (usec): min=536, max=14288, avg=1864.02, stdev=767.52
+    clat percentiles (usec):
+     |  1.00th=[  627],  5.00th=[  766], 10.00th=[  963], 20.00th=[ 1037],
+     | 30.00th=[ 1254], 40.00th=[ 1303], 50.00th=[ 1336], 60.00th=[ 1418],
+     | 70.00th=[ 1483], 80.00th=[ 1582], 90.00th=[ 1762], 95.00th=[ 1926],
+     | 99.00th=[ 2933], 99.50th=[ 4752], 99.90th=[11469], 99.95th=[12256],
+     | 99.99th=[12911]
+   bw (  KiB/s): min= 3536, max= 4984, per=100.00%, avg=4337.33, stdev=262.82, samples=39
+   iops        : min=  884, max= 1246, avg=1084.05, stdev=65.71, samples=39
+  write: IOPS=1080, BW=4323KiB/s (4427kB/s)(84.4MiB/20001msec); 0 zone resets
+    slat (usec): min=2, max=8929, avg=345.08, stdev=309.14
+    clat (usec): min=276, max=14210, avg=1442.60, stdev=705.69
+     lat (usec): min=539, max=14772, avg=1810.01, stdev=750.85
+    clat percentiles (usec):
+     |  1.00th=[  635],  5.00th=[  807], 10.00th=[  971], 20.00th=[ 1074],
+     | 30.00th=[ 1270], 40.00th=[ 1319], 50.00th=[ 1369], 60.00th=[ 1467],
+     | 70.00th=[ 1565], 80.00th=[ 1680], 90.00th=[ 1827], 95.00th=[ 2008],
+     | 99.00th=[ 2999], 99.50th=[ 5407], 99.90th=[11994], 99.95th=[12518],
+     | 99.99th=[13566]
+   bw (  KiB/s): min= 3664, max= 5032, per=100.00%, avg=4336.00, stdev=259.97, samples=39
+   iops        : min=  916, max= 1258, avg=1083.69, stdev=65.02, samples=39
+  lat (usec)   : 10=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=0.17%
+  lat (usec)   : 750=4.61%, 1000=11.26%
+  lat (msec)   : 2=79.39%, 4=3.91%, 10=0.49%, 20=0.16%
+  cpu          : usr=16.52%, sys=46.15%, ctx=24112, majf=0, minf=16
+  IO depths    : 1=0.1%, 2=0.1%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=21669,21618,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=4
+
+Run status group 0 (all jobs):
+   READ: bw=4334KiB/s (4438kB/s), 4334KiB/s-4334KiB/s (4438kB/s-4438kB/s), io=84.6MiB (88.8MB), run=20001-20001msec
+  WRITE: bw=4323KiB/s (4427kB/s), 4323KiB/s-4323KiB/s (4427kB/s-4427kB/s), io=84.4MiB (88.5MB), run=20001-20001msec
+
+Disk stats (read/write):
+  sda: ios=21620/21565, merge=0/11, ticks=8331/7642, in_queue=16000, util=99.16%
+root@ECSE:/home/vboxuser# 
+
