@@ -1,0 +1,34 @@
+root@Akwasi-Addae:~# sudo fio --filename=/dev/sdb --rw=write --direct=1 --bs=4K --ioengine=sync --runtime=20 --numjobs=8 --time_based --group_reporting--name=speed_job --iodepth=0 --size=1048576
+iodepth: min value out of range: 0 (1 min)
+fio: failed parsing iodepth=0
+root@Akwasi-Addae:~# sudo fio --filename=/dev/sdb --rw=write --direct=1 --bs=4K --ioengine=sync --runtime=20 --numjobs=8 --time_based --group_reporting--name=speed_job --iodepth=1 --size=1048576
+speed_job: (g=0): rw=write, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=sync, iodepth=1
+...
+fio-3.16
+Starting 8 processes
+Jobs: 8 (f=8): [W(8)][100.0%][w=271MiB/s][w=69.3k IOPS][eta 00m:00s]
+speed_job: (groupid=0, jobs=8): err= 0: pid=153: Tue Oct 24 16:30:16 2023
+  write: IOPS=58.2k, BW=227MiB/s (239MB/s)(4552MiB/20013msec); 0 zone resets
+    clat (usec): min=3, max=41023, avg=135.48, stdev=472.93
+     lat (usec): min=3, max=41023, avg=135.68, stdev=472.94
+    clat percentiles (usec):
+     |  1.00th=[    7],  5.00th=[    8], 10.00th=[    9], 20.00th=[   10],
+     | 30.00th=[   12], 40.00th=[   13], 50.00th=[   15], 60.00th=[  104],
+     | 70.00th=[  157], 80.00th=[  241], 90.00th=[  351], 95.00th=[  502],
+     | 99.00th=[  947], 99.50th=[ 1205], 99.90th=[ 2089], 99.95th=[ 2769],
+     | 99.99th=[36439]
+   bw (  KiB/s): min=148774, max=354231, per=98.18%, avg=228675.56, stdev=5729.85, samples=314
+   iops        : min=37191, max=88556, avg=57166.07, stdev=1432.47, samples=314
+  lat (usec)   : 4=0.01%, 10=25.47%, 20=30.77%, 50=2.17%, 100=1.18%
+  lat (usec)   : 250=21.14%, 500=14.26%, 750=3.13%, 1000=1.01%
+  lat (msec)   : 2=0.75%, 4=0.09%, 10=0.01%, 20=0.01%, 50=0.01%
+  cpu          : usr=0.05%, sys=0.44%, ctx=0, majf=0, minf=254
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,1165312,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: bw=227MiB/s (239MB/s), 227MiB/s-227MiB/s (239MB/s-239MB/s), io=4552MiB (4773MB), run=20013-20013msec
+root@Akwasi-Addae:~#
