@@ -12,6 +12,7 @@ As we increased the batch size from 4K to 128K, the throughput increased since t
 
 ![](https://github.com/danielle-den/Project3/assets/143743140/d91db6ba-af47-4d66-ac06-dbddbf388149)    ![](https://github.com/danielle-den/Project3/blob/main/figures/1%20iodepth%20read%20Latency.png)
 
+## Write
 Those were the results of the ```--rw-read``` operation, so we decided to see how the SSD would fare when it came to the write operation. The expectation was that the queueing theory to still be followed but with different magnitudes in throughput and latency. As the graphs below show, our expectations were correct and the trend of the previous graphs were realized here as well ; as the batch sizes increased, the latency and throughput increased.
 
 
