@@ -1,4 +1,3 @@
-root@Akwasi-Addae:~# sudo fio --filename=/dev/sda --rw=read --direct=1 --bs=16K --ioengine=sync --runtime=20 --numjobs=8 --time_based --group_reporting --name=speed_job --iodepth=400 --size=1048576
 speed_job: (g=0): rw=read, bs=(R) 16.0KiB-16.0KiB, (W) 16.0KiB-16.0KiB, (T) 16.0KiB-16.0KiB, ioengine=sync, iodepth=400
 ...
 fio-3.16
@@ -28,4 +27,3 @@ speed_job: (groupid=0, jobs=8): err= 0: pid=843: Tue Oct 24 18:25:21 2023
 
 Run status group 0 (all jobs):
    READ: bw=9371MiB/s (9826MB/s), 9371MiB/s-9371MiB/s (9826MB/s-9826MB/s), io=183GiB (197GB), run=20002-20002msec
-root@Akwasi-Addae:~#
