@@ -5,7 +5,7 @@ There are 2 different datasets for this project. The first dataset, which is wit
 
 # Part 1: Data Access Size
 
-The experiment begins with testing the different data sizes to see how they affect throughput and latency. Seeing as this part of the project deals only with testing different batch sizes, we kept the ```iodepth``` variable fixed to the value of 1. The command we ran was , ```fio --filename/dev/sdb --rw-read --direct=1 --bs=4K ==ioengine=sync --runtime=20 --numjobs=1 --time_based --group_reporting --name=speed_job --iodepth=1 --size=1048576```
+The experiment begins with testing the different data sizes to see how they affect throughput and latency. Seeing as this part of the project deals only with testing different batch sizes, we kept the ```iodepth``` variable fixed to the value of 1. Moreover, the ```numjobs``` variable was set to the value of 8, so the latency and bandwitdth are much higher than usual. This was intentionally done simply to show that the queueing theory is valid for high number of jobs. The command we ran was , ```fio --filename/dev/sdb --rw-read --direct=1 --bs=4K ==ioengine=sync --runtime=20 --numjobs=8 --time_based --group_reporting --name=speed_job --iodepth=1 --size=1048576```
 
 
 ![](https://github.com/danielle-den/Project3/blob/main/figures/4K%20read%20iodepth%201.png)
