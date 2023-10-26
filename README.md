@@ -18,12 +18,14 @@ Those were the results of the ```--rw-read``` operation, so we decided to see ho
 We realized also, that the IOPS was decreasing with the increase of the batch size. 
 
 # Part 2: Read vs. Write Intensity Ratio
-The general rule of thumb when designing products for customers is to create the product for the needs of the customer. In the case of SSDs, the designers must create them either with the assumptions that the consumer will perform more reads than writes, more writes than reads, or perhaps a bit of both. After testing the IOPS, latency and bandwidth of our Lenovo system, we were able to see that the designers probably had the idea of ... in mind. As can be seen from the graph below, the SSD had much better performance when the operations were reads only or write only. On the other hand when we performed the experiments skewed towards more reads than writes or even for 50:50, the bandwidth was much lower.
+The general rule of thumb when designing products for customers is to create the product for the needs of the customer. In the case of SSDs, the designers must create them either with the assumptions that the consumer will perform more reads than writes, more writes than reads, or perhaps a bit of both. After testing the IOPS, latency and bandwidth of our Lenovo system, we were able to see that the designers probably had the idea of ... in mind. As can be seen from the graph below, the SSD had much better performance when the operations were reads only or write only. On the other hand when we performed the experiments skewed towards more reads than writes or even for 50:50, the bandwidth was much lower. 
+
+![](https://github.com/danielle-den/Project3/blob/main/figures/read%20write%20ratio%20latency.png)
 
 # Part 3: I/O Queue Depth
 ....
 
-Furthermore, we tested varifying the **block size** against the **Queue Depth** 
+Furthermore, we tested varifying the **block size** against the **queue depth** with the expectation of the same trend as those seen before 
 
 
 
