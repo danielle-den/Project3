@@ -34,8 +34,8 @@ This part of the experiment was very interesting. What we expected to see was th
 
 ![](https://github.com/danielle-den/Project3/blob/main/figures/Latency%20of%20IOdepth.png)
 
+While the queueing theory states that the throughput must increase as the IOdepth is increasing, we don't really see that for our case. What we see instead, as shown by the graph below, is that the bandwidth for all the different batches peaked once they got to the 2nd IOdepth. After that, most of them saturate around that value, while some of them increase and decrease as the IOdepth. One possible reason for this behavior could be hardware limitations. It seems that due to the hardware of the Lenovo Thinkpad, once we've reached 2 IOdepths, the systsm is unable to further increase the bandwidth. 
 
-
-
+![](https://github.com/danielle-den/Project3/blob/main/figures/Bandwidth%20of%20IOdepth.png)
 
 
