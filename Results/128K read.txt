@@ -1,0 +1,31 @@
+root@Akwasi-Addae:~# sudo fio --filename=/dev/sda --rw=read --direct=1 --bs=
+128K --ioengine=sync --runtime=20 --numjobs=1 --time_based --group_reporting --name=speed_job --iodepth=1 --size=1048576-
+speed_job: (g=0): rw=read, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=sync, iodepth=1
+fio-3.16
+Starting 1 process
+Jobs: 1 (f=1): [R(1)][100.0%][r=621MiB/s][r=4970 IOPS][eta 00m:00s]
+speed_job: (groupid=0, jobs=1): err= 0: pid=1378: Wed Oct 25 20:40:37 2023
+  read: IOPS=84.7k, BW=10.3GiB/s (11.1GB/s)(207GiB/20011msec)
+    clat (usec): min=7, max=23682, avg=11.38, stdev=112.40
+     lat (usec): min=7, max=23683, avg=11.42, stdev=112.40
+    clat percentiles (usec):
+     |  1.00th=[    9],  5.00th=[    9], 10.00th=[    9], 20.00th=[    9],
+     | 30.00th=[    9], 40.00th=[    9], 50.00th=[   10], 60.00th=[   10],
+     | 70.00th=[   10], 80.00th=[   11], 90.00th=[   12], 95.00th=[   14],
+     | 99.00th=[   31], 99.50th=[   80], 99.90th=[  126], 99.95th=[  188],
+     | 99.99th=[ 1352]
+   bw (  MiB/s): min=  351, max=12643, per=98.40%, avg=10419.92, stdev=3834.23, samples=40
+   iops        : min= 2812, max=101150, avg=83358.77, stdev=30673.83, samples=40
+  lat (usec)   : 10=75.32%, 20=22.79%, 50=1.03%, 100=0.64%, 250=0.19%
+  lat (usec)   : 500=0.02%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  cpu          : usr=1.87%, sys=48.80%, ctx=0, majf=0, minf=66
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=1695221,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=10.3GiB/s (11.1GB/s), 10.3GiB/s-10.3GiB/s (11.1GB/s-11.1GB/s), io=207GiB (222GB), run=20011-20011msec
+root@Akwasi-Addae:~#
