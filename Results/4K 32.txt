@@ -1,0 +1,42 @@
+root@Akwasi-Addae:~# sudo fio --filename=/dev/sda --rw=randrw --direct=1 --bs=4K --ioengine=sync --runtime=20 --numjobs=1 --time_based --group_reporting --name=speed_job --iodepth=32 --size=1G
+speed_job: (g=0): rw=randrw, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=sync, iodepth=32
+fio-3.16
+Starting 1 process
+Jobs: 1 (f=1): [m(1)][100.0%][r=142MiB/s,w=143MiB/s][r=36.4k,w=36.6k IOPS][eta 00m:00s]
+speed_job: (groupid=0, jobs=1): err= 0: pid=925: Wed Oct 25 20:07:09 2023
+  read: IOPS=31.7k, BW=124MiB/s (130MB/s)(2489MiB/20101msec)
+    clat (usec): min=3, max=483, avg= 6.42, stdev= 5.53
+     lat (usec): min=3, max=483, avg= 6.47, stdev= 5.54
+    clat percentiles (usec):
+     |  1.00th=[    4],  5.00th=[    4], 10.00th=[    5], 20.00th=[    5],
+     | 30.00th=[    5], 40.00th=[    5], 50.00th=[    5], 60.00th=[    5],
+     | 70.00th=[    6], 80.00th=[    8], 90.00th=[   12], 95.00th=[   15],
+     | 99.00th=[   23], 99.50th=[   27], 99.90th=[   48], 99.95th=[   71],
+     | 99.99th=[  253]
+   bw (  KiB/s): min=    7, max=274250, per=100.00%, avg=128597.13, stdev=111093.70, samples=39
+   iops        : min=    1, max=68562, avg=32148.97, stdev=27773.41, samples=39
+  write: IOPS=31.7k, BW=124MiB/s (130MB/s)(2487MiB/20101msec); 0 zone resets
+    clat (usec): min=3, max=110451, avg=23.50, stdev=1313.17
+     lat (usec): min=3, max=110451, avg=23.55, stdev=1313.17
+    clat percentiles (usec):
+     |  1.00th=[     5],  5.00th=[     5], 10.00th=[     5], 20.00th=[     6],
+     | 30.00th=[     6], 40.00th=[     6], 50.00th=[     6], 60.00th=[     6],
+     | 70.00th=[     7], 80.00th=[     9], 90.00th=[    13], 95.00th=[    17],
+     | 99.00th=[    25], 99.50th=[    30], 99.90th=[    62], 99.95th=[    96],
+     | 99.99th=[108528]
+   bw (  KiB/s): min=   31, max=276874, per=98.90%, avg=125302.97, stdev=111472.84, samples=40
+   iops        : min=    7, max=69218, avg=31325.28, stdev=27868.39, samples=40
+  lat (usec)   : 4=2.91%, 10=82.97%, 20=12.13%, 50=1.88%, 100=0.08%
+  lat (usec)   : 250=0.02%, 500=0.01%
+  lat (msec)   : 10=0.01%, 20=0.01%, 100=0.01%, 250=0.01%
+  cpu          : usr=2.80%, sys=29.54%, ctx=0, majf=0, minf=34
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=637124,636712,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: bw=124MiB/s (130MB/s), 124MiB/s-124MiB/s (130MB/s-130MB/s), io=2489MiB (2610MB), run=20101-20101msec
+  WRITE: bw=124MiB/s (130MB/s), 124MiB/s-124MiB/s (130MB/s-130MB/s), io=2487MiB (2608MB), run=20101-20101msec
+root@Akwasi-Addae:~#
