@@ -22,6 +22,7 @@ The general rule of thumb when designing products for customers is to create the
 
 ![](https://github.com/danielle-den/Project3/blob/main/figures/read%20write%20ratio%20latency.png)
 
+
 # Part 3: I/O Queue Depth
 ....
 
