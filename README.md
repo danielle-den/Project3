@@ -29,7 +29,7 @@ The bandwidth graph, as can be seen below shows that the **read** only and **wri
 
 ![](https://github.com/danielle-den/Project3/blob/main/figures/Read%20Write%20Ratio%20Bandwidth.png)
 
-# Part 3: I/O Queue Depth
+# Part 3: I/O Queue Depth``
 This part of the experiment was very interesting. What we expected to see was that the lateny was clearly increasing as the queue depth was increasing. We conducted this test for all the batch sizes that had been used in the previous experiments so that we could get more and better data, but the results were the same. The latency starts relatively high, then it falls off as the batch sizes are increased. The graph below is the latency graph. What we see is that the 128K batch size had the biggest latency out of the rest of the batch sizes, and it generally decreased as the IOdepth increased. As stated previously though, we expected the latency to increase instead of it decreasing. 
 
 ![](https://github.com/danielle-den/Project3/blob/main/figures/Latency%20of%20IOdepth.png)
