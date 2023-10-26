@@ -22,7 +22,7 @@ The general rule of thumb when designing products for customers is to create the
 
 ![](https://github.com/danielle-den/Project3/blob/main/figures/read%20write%20ratio%20latency.png)
 
-The ouput of the bandwidth graph was a bit interesting. Although the trend of higher bandwidth was realized, the magnitude at which it occurred was unforeseen. 
+The ouput of the bandwidth graph was a bit interesting. We can see that for the **read only** test, the bandwidth was quite high whilst every other operation was much lower. We can interpret this as the designers specifically making the system to be much better at read operations as opposed to other operations. Another possible reason for the weird behavior of the graph is 
 
 ![](https://github.com/danielle-den/Project3/blob/main/figures/Read%20Write%20Ratio%20Bandwidth.png)
 
