@@ -18,11 +18,14 @@ Those were the results of the ```--rw-read``` operation, so we decided to see ho
 We realized also, that the IOPS was decreasing with the increase of the batch size. 
 
 # Part 2: Read vs. Write Intensity Ratio
-The general rule of thumb when designing products for customers is to create the product for the needs of the customer. In the case of SSDs, the designers must create them either with the assumptions that the consumer will perform more reads than writes, more writes than reads, or perhaps a bit of both. After testing the IOPS, latency and bandwidth of our Lenovo system, we were able to see that the designers probably had the idea of  
+
+## Latency
+The general rule of thumb when designing products for customers is to create the product for the needs of the customer. In the case of SSDs, the designers must create them either with the assumptions that the consumer will perform more reads than writes, more writes than reads, or perhaps a bit of both. After testing for the latency of the different ratios of **Read** and **Write**, we saw that the SSD had the most lag for the **50:50** and **70:30** ratio. This can be interpreted as the system being created to perform better for either reading or writing. When it's a mix of both, no matter what the ratio is, the performance is not like what would be expected for a single focused operation.
 
 ![](https://github.com/danielle-den/Project3/blob/main/figures/read%20write%20ratio%20latency.png)
 
-The ouput of the bandwidth graph was a bit interesting. We can see that for the **read only** test, the bandwidth was quite high whilst every other operation was much lower. We can interpret this as the designers specifically making the system to be much better at read operations as opposed to other operations. Another possible reason for the weird behavior of the graph is 
+## Bandwidth
+The bandwidth graph, as can be seen below shows that the **read** only and **write** only jobs had higher bandwidth, while the other 2 options were lower. This goes back to the explanation from before about how the system is much better at performing one type of task as opposed to switching between them. For this specific test, the storage access queue depth was only tested for in the sense that we can see how the bandwidth is continously going up when the **block size** is also increasing. 
 
 ![](https://github.com/danielle-den/Project3/blob/main/figures/Read%20Write%20Ratio%20Bandwidth.png)
 
